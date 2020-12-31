@@ -14,9 +14,9 @@ console.log('Wpisana odpowiedź to: ' + playerInput);
 function getMoveName(moveId) {
     if (moveId == '1') {
         return 'kamień';
-    } else if (moveId == '2')
+    } else if (moveId == '2'){
         return 'papier';
-    } else if (moveId == '3')
+    } else if (moveId == '3'){
         return 'nozyce';
     } else {
         return 'nieznay ruch'
