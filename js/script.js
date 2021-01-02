@@ -37,7 +37,8 @@ playerMove = argButtonName;
 computerMove = getMoveName(randomNumber);
 console.log('Ruch komputera:', computerMove);
 
-
+function displayResult(playerMove, computerMove) {
+    console.log('wywołano funkcję displayResults z argumentami: ' + playerMove + ', ' + computerMove);
 if (playerMove == 'kamień' && computerMove == 'papier') {
     printMessage('Wygrywa komputer');
 } else if (playerMove == 'papier' && computerMove == 'nozyce') {
@@ -51,7 +52,7 @@ if (playerMove == 'kamień' && computerMove == 'papier') {
 } else {
     printMessage('Wygral gracz')
 }
-
+}
  
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
 buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
