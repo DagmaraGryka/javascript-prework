@@ -1,5 +1,6 @@
 //Functions
 
+ {   
 var buttonRock, buttonPaper, buttonScissors;
 
 function buttonClicked(argButtonName) {
@@ -32,15 +33,15 @@ function getMoveName(moveId) {
     }
 }
   
-playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 playerMove = getMoveName(playerInput);
 
 computerMove = getMoveName(randomNumber);
-console.log('Ruch komputera:', computerMove);
+console.log('Ruch komputera:' + computerMove);
+}
 
 
-
-
+function displayResult(computerMove, playerMove){
+    printMessage('Zagrałem' + computerMove + ', a ty ' + playerMove);
 if (playerMove == 'kamień' && computerMove == 'papier') {
     printMessage('Wygrywa komputer');
 } else if (playerMove == 'papier' && computerMove == 'nozyce') {
@@ -54,6 +55,8 @@ if (playerMove == 'kamień' && computerMove == 'papier') {
 } else {
     printMessage('Wygral gracz')
 }
+}
+
 
  
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
