@@ -38,17 +38,17 @@ function displayResult(computerMove, playerMove){
     printMessage('Zagrałem '+ computerMove + ', a ty ' + playerMove);
 
     if( computerMove == 'kamień' && playerMove == 'papier'){
-        return 'Ty wygrywasz!';
+        printMessage('Ty Wygrywasz');
     } else if ( computerMove == 'nożyczki' && playerMove == 'kamień'){
-        return 'Ty wygrywasz!';
+        printMessage('Ty Wygrywasz');
     } else if ( computerMove == 'papier' && playerMove == 'nożyczki'){
-        return 'Ty wygrywasz!';
+        printMessage('Ty Wygrywasz');
     } else if( computerMove == playerMove ){
-        return 'Remis!';
+        printMessage('Remis');
     } else if( playerMove == 'nieznany ruch'){
-        return 'Nieznany ruch!';
+        printMessage('Nieznany ruch');
     } else {
-        return 'Przegrałeś'} 
+        printMessage('Przegrales');} 
 
     }
 }
