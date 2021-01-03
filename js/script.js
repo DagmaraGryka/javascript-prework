@@ -1,20 +1,18 @@
 //Functions
 
-var buttonRock, buttonPaper, buttonScissors; 
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
+  
+ buttonRock = document.getElementById('button-rock');
+ buttonPaper = document.getElementById('button-paper');
+ buttonScissors = document.getElementById('button-scissors');
 
 function buttonClicked(argButtonName){
     clearMessages();
     console.log(argButtonName + ' został kliknięty '); 
 
-var randomNumber, computerMove;
-randomNumber = Math.floor(Math.random() * 3 + 1);
+ 
+ const randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 
-var playerMove, playerInput;
-console.log('Wpisana odpowiedź to: ' + playerInput);
   
 function getMoveName(moveId) {
     if (moveId == '1') {
@@ -28,10 +26,10 @@ function getMoveName(moveId) {
     }
 }
   
-playerMove = argButtonName;
+const playerMove = argButtonName;
 console.log('ruch gracza to: ' + playerMove);
 
-computerMove = getMoveName(randomNumber);
+const computerMove = getMoveName(randomNumber);
 console.log('Ruch komputera:' + computerMove);
 
 displayResult(playerMove, computerMove);
