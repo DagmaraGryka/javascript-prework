@@ -11,8 +11,7 @@ function buttonClicked(argButtonName){
 
 var randomNumber, computerMove;
 randomNumber = Math.floor(Math.random() * 3 + 1);
-printMessage('Wylosowana liczba to: ' + randomNumber);
-
+console.log('wylosowana liczba to: ' + randomNumber);
 
 var playerMove, playerInput;
 console.log('Wpisana odpowiedź to: ' + playerInput);
@@ -35,10 +34,10 @@ console.log('ruch gracza to: ' + playerMove);
 computerMove = getMoveName(randomNumber);
 console.log('Ruch komputera:' + computerMove);
 
-
+displayResult(playerMove, computerMove);
 
 function displayResult(computerMove, playerMove){
-    printMessage('Zagrałem' + computerMove + ', a ty ' + playerMove);
+    printMessage('Zagrałem '+ computerMove + ', a ty ' + playerMove);
 
     if( computerMove == 'kamień' && playerMove == 'papier'){
         return 'Ty wygrywasz!';
@@ -55,6 +54,7 @@ function displayResult(computerMove, playerMove){
 
     }
 }
+
 buttonRock.addEventListener('click', function(){buttonClicked('kamień')});
 buttonPaper.addEventListener('click', function(){buttonClicked('papier')});
 buttonScissors.addEventListener('click', function(){buttonClicked('nozyce')}); 
